@@ -19,6 +19,14 @@
   "commitBodyTable": true,
   "enabledManagers": ["npm"],
   "rangeStrategy": "update-lockfile",
+  "prBodyColumns": [
+    "Package",
+    "Update",
+    "Type",
+    "New value",
+    "Package file",
+    "References"
+  ],
   "packageRules": [
     {
       "packagePatterns": ["*"],
