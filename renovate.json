@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":separateMajorReleases",
+    ":ignoreUnstable",
+    ":maintainLockFilesMonthly",
+    ":prImmediately",
+    ":prHourlyLimitNone",
+    ":automergePatch",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":ignoreModulesAndTests",
+    ":prConcurrentLimit20",
+    "group:monorepos",
+    "group:recommended",
+    "helpers:disableTypesNodeMajor",
+    ":label(dependencies)"
+  ],
+  "commitBodyTable": true,
+  "enabledManagers": ["npm"],
+  "rangeStrategy": "update-lockfile",
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "labels": ["dependencies", "js"],
+      "patch": {
+        "groupName": "all js packages",
+        "groupSlug": "all-js"
+      }
+    }
+  ]
+}
